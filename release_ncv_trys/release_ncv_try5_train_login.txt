@@ -1,0 +1,98 @@
+D:\software\anaconda3\python.exe D:\Re\PYProject\drugRelease2025_1\release_ncv_try5.py
+D:\software\anaconda3\Lib\site-packages\torch_geometric\typing.py:86: UserWarning: An issue occurred while importing 'torch-scatter'. Disabling its usage. Stacktrace: [WinError 127] 找不到指定的程序。
+  warnings.warn(f"An issue occurred while importing 'torch-scatter'. "
+随机种子设置为: 42
+正在创建序列数据...
+序列数据创建完成。X shape: (908, 3, 17), Y shape: (908, 1), Groups shape: (908,)
+模型输入的特征维度 (input_size) 设置为: 17
+
+开始第 1/5 次外层交叉验证...
+
+################################################################
+
+STATUS REPORT:
+迭代 1/5 完成
+测试集 MAE : 0.05716, 最佳验证集 Score: 0.06981
+
+最佳模型参数:
+{'module__num_layers': 1, 'module__hidden_size': 32, 'max_epochs': 200, 'lr': 0.001, 'batch_size': 64}
+
+################################################################
+
+
+开始第 2/5 次外层交叉验证...
+
+################################################################
+
+STATUS REPORT:
+迭代 2/5 完成
+测试集 MAE : 0.08169, 最佳验证集 Score: 0.07442
+
+最佳模型参数:
+{'module__num_layers': 2, 'module__hidden_size': 128, 'max_epochs': 150, 'lr': 0.005, 'batch_size': 64}
+
+################################################################
+
+
+开始第 3/5 次外层交叉验证...
+
+################################################################
+
+STATUS REPORT:
+迭代 3/5 完成
+测试集 MAE : 0.03874, 最佳验证集 Score: 0.06389
+
+最佳模型参数:
+{'module__num_layers': 1, 'module__hidden_size': 128, 'max_epochs': 200, 'lr': 0.001, 'batch_size': 32}
+
+################################################################
+
+
+开始第 4/5 次外层交叉验证...
+
+################################################################
+
+STATUS REPORT:
+迭代 4/5 完成
+测试集 MAE : 0.08037, 最佳验证集 Score: 0.06515
+
+最佳模型参数:
+{'module__num_layers': 2, 'module__hidden_size': 128, 'max_epochs': 100, 'lr': 0.001, 'batch_size': 16}
+
+################################################################
+
+
+开始第 5/5 次外层交叉验证...
+
+################################################################
+
+STATUS REPORT:
+迭代 5/5 完成
+测试集 MAE : 0.06811, 最佳验证集 Score: 0.06925
+
+最佳模型参数:
+{'module__num_layers': 3, 'module__hidden_size': 64, 'max_epochs': 150, 'lr': 0.001, 'batch_size': 16}
+
+################################################################
+
+
+CV 结果已保存至: release_NESTED_CV_RESULTS/GRU_sequence_model_results.pkl
+最终模型已保存至: release_Trained_models/GRU_sequence_model_final.pkl
+
+嵌套交叉验证流程完成！
+
+CV 结果摘要:
+   Iter  Valid Score  Test Score                                        Model Parms                                          DP_Groups                               Experimental_Release                                  Predicted_Release  Score_difference
+0     5     0.069250    0.068106  {'module__num_layers': 3, 'module__hidden_size...  [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 18, 18...  [[0.174216], [0.24632159], [0.3072955], [0.373...  [[0.15287822], [0.23275809], [0.30777532], [0....          0.001144
+1     2     0.074417    0.081687  {'module__num_layers': 2, 'module__hidden_size...  [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...  [[0.14089999], [0.1618], [0.1868], [0.2125], [...  [[0.19384927], [0.21135013], [0.22447288], [0....          0.007271
+2     1     0.069809    0.057157  {'module__num_layers': 1, 'module__hidden_size...  [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...  [[0.14089999], [0.1618], [0.1868], [0.2125], [...  [[0.18265547], [0.22114757], [0.2400057], [0.2...          0.012652
+
+最终训练好的模型:
+<class 'skorch.regressor.NeuralNetRegressor'>[initialized](
+  module_=GRUPredictor(
+    (gru): GRU(17, 64, num_layers=3, batch_first=True, dropout=0.1)
+    (fc): Linear(in_features=64, out_features=1, bias=True)
+  ),
+)
+
+进程已结束，退出代码为 0

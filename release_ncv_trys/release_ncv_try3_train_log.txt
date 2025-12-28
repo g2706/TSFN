@@ -1,0 +1,122 @@
+D:\software\anaconda3\python.exe D:\Re\PYProject\drugRelease2025_1\release_ncv_try3.py
+数据加载完成！共找到 88 个独立样本。
+--- 开始嵌套交叉验证 (共 5 轮外层循环) ---
+
+
+################## 外层循环 1/5 ##################
+--- 开始内层 5-折交叉验证以搜索超参数 (10 次尝试) ---
+  > 尝试 1/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.005173
+  > 尝试 2/10: params={'hidden_size': 128, 'num_layers': 1, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.009497
+  > 尝试 3/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.008866
+  > 尝试 4/10: params={'hidden_size': 64, 'num_layers': 2, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.009960
+  > 尝试 5/10: params={'hidden_size': 32, 'num_layers': 1, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.006749
+  > 尝试 6/10: params={'hidden_size': 32, 'num_layers': 1, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.007495
+  > 尝试 7/10: params={'hidden_size': 128, 'num_layers': 3, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.014533
+  > 尝试 8/10: params={'hidden_size': 64, 'num_layers': 1, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.010429
+  > 尝试 9/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.014655
+  > 尝试 10/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.009753
+
+--- 外层循环 1 的最佳超参数已找到 ---
+  - 参数: {'hidden_size': 64, 'num_layers': 3, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}
+  - 最佳验证集MSE: 0.005173
+--- 使用最佳参数在完整外层训练集上训练，并在外层测试集上评估 ---
+
+--- 外层循环 1 最终结果 ---
+  - 测试集 MSE: 0.007078
+
+
+################## 外层循环 2/5 ##################
+--- 开始内层 5-折交叉验证以搜索超参数 (10 次尝试) ---
+  > 尝试 1/10: params={'hidden_size': 64, 'num_layers': 2, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.008944
+  > 尝试 2/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.007538
+  > 尝试 3/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.012307
+  > 尝试 4/10: params={'hidden_size': 128, 'num_layers': 3, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.006549
+  > 尝试 5/10: params={'hidden_size': 32, 'num_layers': 1, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.004930
+  > 尝试 6/10: params={'hidden_size': 64, 'num_layers': 1, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.006012
+  > 尝试 7/10: params={'hidden_size': 64, 'num_layers': 2, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.006820
+  > 尝试 8/10: params={'hidden_size': 64, 'num_layers': 1, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.005658
+  > 尝试 9/10: params={'hidden_size': 32, 'num_layers': 2, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.007620
+  > 尝试 10/10: params={'hidden_size': 64, 'num_layers': 2, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.009357
+
+--- 外层循环 2 的最佳超参数已找到 ---
+  - 参数: {'hidden_size': 32, 'num_layers': 1, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}
+  - 最佳验证集MSE: 0.004930
+--- 使用最佳参数在完整外层训练集上训练，并在外层测试集上评估 ---
+
+--- 外层循环 2 最终结果 ---
+  - 测试集 MSE: 0.009121
+
+
+################## 外层循环 3/5 ##################
+--- 开始内层 5-折交叉验证以搜索超参数 (10 次尝试) ---
+  > 尝试 1/10: params={'hidden_size': 128, 'num_layers': 2, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.006061
+  > 尝试 2/10: params={'hidden_size': 64, 'num_layers': 2, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.011996
+  > 尝试 3/10: params={'hidden_size': 128, 'num_layers': 1, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.005738
+  > 尝试 4/10: params={'hidden_size': 128, 'num_layers': 2, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.012368
+  > 尝试 5/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.016069
+  > 尝试 6/10: params={'hidden_size': 64, 'num_layers': 1, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.007133
+  > 尝试 7/10: params={'hidden_size': 64, 'num_layers': 1, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.005388
+  > 尝试 8/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.010548
+  > 尝试 9/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.011363
+  > 尝试 10/10: params={'hidden_size': 32, 'num_layers': 2, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.009402
+
+--- 外层循环 3 的最佳超参数已找到 ---
+  - 参数: {'hidden_size': 64, 'num_layers': 1, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}
+  - 最佳验证集MSE: 0.005388
+--- 使用最佳参数在完整外层训练集上训练，并在外层测试集上评估 ---
+
+--- 外层循环 3 最终结果 ---
+  - 测试集 MSE: 0.003547
+
+
+################## 外层循环 4/5 ##################
+--- 开始内层 5-折交叉验证以搜索超参数 (10 次尝试) ---
+  > 尝试 1/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.015330
+  > 尝试 2/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.009575
+  > 尝试 3/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.010877
+  > 尝试 4/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.006091
+  > 尝试 5/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.009483
+  > 尝试 6/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.010046
+  > 尝试 7/10: params={'hidden_size': 64, 'num_layers': 3, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.011003
+  > 尝试 8/10: params={'hidden_size': 128, 'num_layers': 3, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.008089
+  > 尝试 9/10: params={'hidden_size': 128, 'num_layers': 1, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.008100
+  > 尝试 10/10: params={'hidden_size': 32, 'num_layers': 2, 'lr': 0.01, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.013690
+
+--- 外层循环 4 的最佳超参数已找到 ---
+  - 参数: {'hidden_size': 64, 'num_layers': 3, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}
+  - 最佳验证集MSE: 0.006091
+--- 使用最佳参数在完整外层训练集上训练，并在外层测试集上评估 ---
+
+--- 外层循环 4 最终结果 ---
+  - 测试集 MSE: 0.002533
+
+
+################## 外层循环 5/5 ##################
+--- 开始内层 5-折交叉验证以搜索超参数 (10 次尝试) ---
+  > 尝试 1/10: params={'hidden_size': 32, 'num_layers': 2, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.010421
+  > 尝试 2/10: params={'hidden_size': 32, 'num_layers': 2, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.005773
+  > 尝试 3/10: params={'hidden_size': 128, 'num_layers': 2, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.005503
+  > 尝试 4/10: params={'hidden_size': 128, 'num_layers': 3, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.013961
+  > 尝试 5/10: params={'hidden_size': 128, 'num_layers': 2, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.013356
+  > 尝试 6/10: params={'hidden_size': 32, 'num_layers': 3, 'lr': 0.005, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.010652
+  > 尝试 7/10: params={'hidden_size': 64, 'num_layers': 1, 'lr': 0.005, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.008130
+  > 尝试 8/10: params={'hidden_size': 32, 'num_layers': 1, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.008945
+  > 尝试 9/10: params={'hidden_size': 128, 'num_layers': 3, 'lr': 0.01, 'batch_size': 32, 'epochs': 100}, avg_val_loss=0.014032
+  > 尝试 10/10: params={'hidden_size': 128, 'num_layers': 3, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}, avg_val_loss=0.010784
+
+--- 外层循环 5 的最佳超参数已找到 ---
+  - 参数: {'hidden_size': 128, 'num_layers': 2, 'lr': 0.001, 'batch_size': 32, 'epochs': 100}
+  - 最佳验证集MSE: 0.005503
+--- 使用最佳参数在完整外层训练集上训练，并在外层测试集上评估 ---
+
+--- 外层循环 5 最终结果 ---
+  - 测试集 MSE: 0.003985
+
+
+################## 嵌套交叉验证全部完成 ##################
+在 5 轮外层交叉验证中的平均测试集MSE: 0.005253 ± 0.002458
+
+表现最好的一轮是第 4 轮，其测试MSE为: 0.002533
+全局最优超参数为: {'hidden_size': 64, 'num_layers': 3, 'lr': 0.001, 'batch_size': 16, 'epochs': 100}
+
+进程已结束，退出代码为 0

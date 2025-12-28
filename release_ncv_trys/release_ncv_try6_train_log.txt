@@ -1,0 +1,37 @@
+D:\software\anaconda3\python.exe D:\Re\PYProject\drugRelease2025_1\release_ncv_try6.py
+D:\software\anaconda3\Lib\site-packages\torch_geometric\typing.py:86: UserWarning: An issue occurred while importing 'torch-scatter'. Disabling its usage. Stacktrace: [WinError 127] 找不到指定的程序。
+  warnings.warn(f"An issue occurred while importing 'torch-scatter'. "
+随机种子设置为: 42
+GPU is available! Device: NVIDIA GeForce RTX 4060 Ti
+
+模型将运行在 'cuda' 设备上。
+正在创建序列数据...
+D:\Re\PYProject\drugRelease2025_1\release_ncv_try6.py:133: FutureWarning: factorize with argument that is not not a Series, Index, ExtensionArray, or np.ndarray is deprecated and will raise in a future version.
+  self.G, self.group_labels = pd.factorize(groups_list)
+序列数据创建完成。X shape: (908, 3, 17), Y shape: (908, 1), Groups shape: (908,)
+模型输入的特征维度 (input_size) 设置为: 17
+共找到 69 个药物组用于交叉验证。
+
+开始第 1/5 次外层交叉验证 (按 drug_name 分组)...
+
+################################################################
+
+STATUS REPORT:
+迭代 1/5 完成
+测试集 MAE (原始尺度): 0.05600, 最佳验证集 Score (负MAE): 0.05967
+
+最佳模型参数:
+{'module__num_layers': 1, 'module__hidden_size': 64, 'max_epochs': 200, 'lr': 0.001, 'batch_size': 16}
+
+################################################################
+
+
+开始第 2/5 次外层交叉验证 (按 drug_name 分组)...
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FF86FA7DF54  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FF90CEBB71D  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF90DC4E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FF90FCDC34C  Unknown               Unknown  Unknown
+
+进程已结束，退出代码为 0
